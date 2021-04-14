@@ -1,3 +1,4 @@
+#![no_std]
 #[macro_use] extern crate rustler;
 #[macro_use] extern crate rustler_codegen;
 #[macro_use] extern crate lazy_static;
@@ -43,7 +44,7 @@ fn decode<'a>(env: Env<'a>, args: &[Term<'a>]) -> NifResult<Term<'a>> {
 
 fn encode<'a>(env: Env<'a>, args: &[Term<'a>]) -> NifResult<Term<'a>> {
     let enc : String = args[1].decode()?;
- 
+
     match encoding_from_whatwg_label(&enc) {
         Some(encoding) => {
             let in_str : &str = args[0].decode()?;
