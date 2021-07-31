@@ -33,7 +33,7 @@ defmodule MbcsRs.MixProject do
       {:ex_doc, "~> 0.19.1", runtime: false, only: [:dev, :test]},
       {:credo, "~> 0.9.3", runtime: false, only: [:dev, :test]},
       {:dialyxir, "~> 0.5", only: [:dev, :test], runtime: false},
-      {:rustler, "~> 0.22"}
+      {:rustler, git: "https://github.com/rusterlium/rustler"}
     ]
   end
 
